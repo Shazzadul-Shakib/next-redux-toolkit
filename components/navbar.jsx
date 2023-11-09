@@ -7,7 +7,6 @@ import { logout } from "@/redux/login/loginSlice";
 
 export default function Navbar() {
   const isLoggedIn = useSelector(state => state.isLoggedIn.value);
-  console.log(isLoggedIn);
   const pathname = usePathname();
   const dispatch = useDispatch();
   return (

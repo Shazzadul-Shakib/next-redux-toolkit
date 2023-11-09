@@ -8,8 +8,11 @@ export const api = createApi({
   endpoints: (builder) => ({
     getAllProducts: builder.query({
       query: ()=>'products'
+    }),
+    getIphone: builder.query({
+      query:(product)=>`/products/search?q=${product}`
     })
   }) 
 });
 
-export const { useGetAllProductsQuery } = api;
+export const { useGetAllProductsQuery,useGetIphoneQuery } = api;
